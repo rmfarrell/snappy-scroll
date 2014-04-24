@@ -1,0 +1,202 @@
+#slide-1 {background-color: #727766}
+#slide-2 {background-color: #80886d}
+#slide-3 {background-color: #777e67}
+#slide-4 {background-color: #8a8e80}
+#slide-5 {background-color: #979b8c}
+#slide-6 {background-color: #8d9874}
+#slide-7 {background-color: #625e49}
+#slide-8 {background-color: #474538}
+
+.slide {
+	background-color: grey;
+	overflow: hidden;
+
+	h1 {
+		line-height: 1.5em;
+		font-size: 3em;
+		@include text-shadow(1px -1px 3px #fff);
+	}
+}
+	
+.valign-container {
+	display: table;
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.valign {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#main {
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+
+.controller {
+	position: fixed;
+	z-index: 500;
+	top: 50%;
+	margin-top: -130px;
+	left: 2em;
+}
+
+#navigator {
+	
+	li {
+		margin: 0 0 .25em;
+		clear: both;
+	}
+	
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	@include opacity(.75);
+	
+	a {
+	
+		color: #fff;
+		display: block;
+		height: 1.1em;
+		line-height: 1em;
+		width: 12px;
+		clear: both;
+		margin: 0 0 .25em;
+		font-size: 1.4em;
+		line-height: 1.2em;
+		text-align: center;
+	
+		.indicator {
+			position: relative;
+			top: 6px;
+			left: 2px;
+			background-color: #fff;
+			border: 2px solid #fff;
+			@include inline-block();
+			height: 4px;
+			width: 4px;
+			text-indent: -999em;
+			text-decoration: none;
+			@include border-radius(50%);
+			@include single-transition(all, .4s, .1s);
+			float: left;
+		}
+	
+		.label {
+			text-transform: uppercase;
+			pointer-events: none;
+			@include single-transition(opacity, .6s);
+			display: block;
+			margin-left: 1.1em;
+			letter-spacing: 1px;
+			@include opacity(0);
+		
+			.touch-device & {
+				display: none;
+			}
+		}
+	
+		@mixin navIndicator() {
+			background-color: #000;
+			background-color:rgba(255,0,0,0); //IE9 doesn't like a's with transparent backgrounds
+			top: 3px;
+			left: -2px;
+			height: 11px;
+			width: 11px;
+			border-color: #fff;
+		}
+	
+		&:hover .indicator {
+			.non-touch-device & {
+	        	@include navIndicator();
+			}
+		}
+	
+		&.active .indicator {
+			@include navIndicator();
+		}
+	
+		&:hover .label {
+			@include opacity(1);
+		}
+	}
+}
+
+#next-section {
+	position: fixed;
+	display: block;
+	bottom: 1em;
+	left: 50%;
+	margin-left: -29px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	color: #363636;
+	height: 56px;
+	width: 58px;
+	font-size: 1.3em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	
+	&:after,
+	&:before {
+		top: 27px;
+		position: absolute;
+		content: "";
+		width: 200px;
+		height: 4px;
+		display: black;
+		pointer-events: none;
+	}
+	
+	&:after {
+		left: 58px;
+		background-position: right center
+	}
+	
+	&:before {
+		right: 58px;
+		width: 200px;
+	}
+	
+	&:hover .label {
+		@include opacity(1);
+		@include single-transition(opacity, .5s);
+	}
+	
+	.label {
+		white-space: nowrap;
+		position: relative;
+		top: -1.3em;
+		margin-left: -.75em;
+		pointer-events: none;
+		@include opacity(0);
+		color: #333;
+		
+		.touch {
+			display: none;
+		}
+	}
+	
+	.touch-device & {
+		
+		.label {
+			@include opacity(1);
+			
+			.touch {display: inline;}
+			.desktop{display: none;}
+		}
+	}
+	
+	.slide-height-600-800 & {
+		display: none!important;
+	}
+}

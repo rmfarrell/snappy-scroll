@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" id="fixstyles"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" id="fixstyles"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" id="fixstyles"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" id="fixstyles"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Snappy Scroll Demo</title>
+		<link rel="stylesheet" href="stylesheets/main.css">
+ 		<script src="js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+		<div class="article-container">
+			<article id="main">
+				<section id="slide-1" class="slide">
+					<div class="valign-container">
+						<div class="valign">
+				 			<h1>This is the<br/>first slide.</h1>
+						</div>
+					</div>
+				</section>
+				<section id="slide-2" class="slide">
+					<div class="valign-container">
+						<div class="valign">
+				 			<h1>This is the<br/>second slide.</h1>
+						</div>
+					</div>
+				</section>
+				<section id="slide-3" class="slide">
+					<div class="valign-container">
+						<div class="valign">
+				 			<h1>This is the<br/>third slide.</h1>
+						</div>
+					</div>
+				</section>
+				<section id="slide-4" class="slide">
+					<div class="valign-container">
+						<div class="valign">
+				 			<h1>This is the<br/>fourth slide.</h1>
+						</div>
+					</div>
+				</section>
+				<div id="slide-5" class="slide" data-snappy-height="250">
+					<div class="valign-container">
+						<div class="valign">
+							<p>
+								This slide is shorter than the others.
+							</p>
+							<p>
+								 See data-snappy-height property in the markup.
+							</p>
+						</div>
+					</div>
+				</div>
+				<footer class="slide" id="footer">
+					<div class="valign-container">
+						<div class="valign">
+							<p>That's it. Have fun.</p>
+						</div>
+					</div>
+				</footer>
+				<a href="#" id="next-section"><span class="label"><span class="desktop">Scroll</span> <span class="touch">Swipe</span> for More</span></a>
+			</article>
+		</div>
+		<nav class="controller">
+			<ul id="navigator">
+				<li>
+					<a href="#slide-1">
+						<div class="indicator"></div>
+						<span class="label">Lorem</span></a>
+				</li>
+				<li>
+					<a href="#slide-2">
+						<div class="indicator"></div>
+						<span class="label">Ipsum</span></a>
+				</li>
+				<li>
+					<a href="#slide-3">
+						<div class="indicator"></div>
+						<span class="label">Dolor</span></a>
+				</li>
+				<li>
+					<a href="#slide-4">
+						<div class="indicator"></div>
+						<span class="label">Sit</span></a>
+				</li>
+				<li>
+					<a href="#slide-5">
+						<div class="indicator"></div>
+						<span class="label">Amet</span></a>
+				</li>
+			</ul> 
+		</nav>
+		
+		<!-- Snappy Scroll Dependencies -->
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/jquery.touchSwipe.min.js"></script>
+		<script src="js/throttle-debounce.js"></script>
+		
+		<!-- Snappy Scroll class -->
+		<script src="js/snappy-scroll.js"></script>
+		<script src="js/main.js"></script>
+		
+    </body>
+</html>

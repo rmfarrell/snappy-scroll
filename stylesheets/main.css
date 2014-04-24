@@ -1,0 +1,265 @@
+/* line 1, ../sass/_snappy.scss */
+#slide-1 {
+  background-color: #727766;
+}
+
+/* line 2, ../sass/_snappy.scss */
+#slide-2 {
+  background-color: #80886d;
+}
+
+/* line 3, ../sass/_snappy.scss */
+#slide-3 {
+  background-color: #777e67;
+}
+
+/* line 4, ../sass/_snappy.scss */
+#slide-4 {
+  background-color: #8a8e80;
+}
+
+/* line 5, ../sass/_snappy.scss */
+#slide-5 {
+  background-color: #979b8c;
+}
+
+/* line 6, ../sass/_snappy.scss */
+#slide-6 {
+  background-color: #8d9874;
+}
+
+/* line 7, ../sass/_snappy.scss */
+#slide-7 {
+  background-color: #625e49;
+}
+
+/* line 8, ../sass/_snappy.scss */
+#slide-8 {
+  background-color: #474538;
+}
+
+/* line 10, ../sass/_snappy.scss */
+.slide {
+  background-color: grey;
+  overflow: hidden;
+}
+/* line 14, ../sass/_snappy.scss */
+.slide h1 {
+  line-height: 1.5em;
+  font-size: 3em;
+  text-shadow: 1px -1px 3px white;
+}
+
+/* line 21, ../sass/_snappy.scss */
+.valign-container {
+  display: table;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 28, ../sass/_snappy.scss */
+.valign {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 34, ../sass/_snappy.scss */
+#main {
+  width: 100%;
+}
+
+/* line 38, ../sass/_snappy.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+/* line 44, ../sass/_snappy.scss */
+.controller {
+  position: fixed;
+  z-index: 500;
+  top: 50%;
+  margin-top: -130px;
+  left: 2em;
+}
+
+/* line 52, ../sass/_snappy.scss */
+#navigator {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
+}
+/* line 54, ../sass/_snappy.scss */
+#navigator li {
+  margin: 0 0 .25em;
+  clear: both;
+}
+/* line 64, ../sass/_snappy.scss */
+#navigator a {
+  color: #fff;
+  display: block;
+  height: 1.1em;
+  line-height: 1em;
+  width: 12px;
+  clear: both;
+  margin: 0 0 .25em;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  text-align: center;
+}
+/* line 77, ../sass/_snappy.scss */
+#navigator a .indicator {
+  position: relative;
+  top: 6px;
+  left: 2px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 4px;
+  width: 4px;
+  text-indent: -999em;
+  text-decoration: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition: all 0.4s 0.1s;
+  -o-transition: all 0.4s 0.1s;
+  transition: all 0.4s 0.1s;
+  float: left;
+}
+/* line 93, ../sass/_snappy.scss */
+#navigator a .label {
+  text-transform: uppercase;
+  pointer-events: none;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  display: block;
+  margin-left: 1.1em;
+  letter-spacing: 1px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 102, ../sass/_snappy.scss */
+.touch-device #navigator a .label {
+  display: none;
+}
+/* line 118, ../sass/_snappy.scss */
+.non-touch-device #navigator a:hover .indicator {
+  background-color: #000;
+  background-color: rgba(255, 0, 0, 0);
+  top: 3px;
+  left: -2px;
+  height: 11px;
+  width: 11px;
+  border-color: #fff;
+}
+/* line 123, ../sass/_snappy.scss */
+#navigator a.active .indicator {
+  background-color: #000;
+  background-color: rgba(255, 0, 0, 0);
+  top: 3px;
+  left: -2px;
+  height: 11px;
+  width: 11px;
+  border-color: #fff;
+}
+/* line 127, ../sass/_snappy.scss */
+#navigator a:hover .label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 133, ../sass/_snappy.scss */
+#next-section {
+  position: fixed;
+  display: block;
+  bottom: 1em;
+  left: 50%;
+  margin-left: -29px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  color: #363636;
+  height: 56px;
+  width: 58px;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* line 150, ../sass/_snappy.scss */
+#next-section:after, #next-section:before {
+  top: 27px;
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 4px;
+  display: black;
+  pointer-events: none;
+}
+/* line 160, ../sass/_snappy.scss */
+#next-section:after {
+  left: 58px;
+  background-position: right center;
+}
+/* line 165, ../sass/_snappy.scss */
+#next-section:before {
+  right: 58px;
+  width: 200px;
+}
+/* line 170, ../sass/_snappy.scss */
+#next-section:hover .label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+/* line 175, ../sass/_snappy.scss */
+#next-section .label {
+  white-space: nowrap;
+  position: relative;
+  top: -1.3em;
+  margin-left: -.75em;
+  pointer-events: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  color: #333;
+}
+/* line 184, ../sass/_snappy.scss */
+#next-section .label .touch {
+  display: none;
+}
+/* line 191, ../sass/_snappy.scss */
+.touch-device #next-section .label {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 194, ../sass/_snappy.scss */
+.touch-device #next-section .label .touch {
+  display: inline;
+}
+/* line 195, ../sass/_snappy.scss */
+.touch-device #next-section .label .desktop {
+  display: none;
+}
+/* line 199, ../sass/_snappy.scss */
+.slide-height-600-800 #next-section {
+  display: none !important;
+}
